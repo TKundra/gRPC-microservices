@@ -1,0 +1,70 @@
+{
+    "API": "http://localhost:5001",
+    "routes": {
+        "user": [
+            {
+                "url": "http://localhost:5001/user/:id",
+                "method": "GET"
+            },
+            {
+                "url": "http://localhost:5001/user/login",
+                "method": "POST",
+                "body": {
+                    "email": "user@example.com",
+                    "password": "password"
+                }
+            },
+            {
+                "url": "http://localhost:5001/user/register",
+                "method": "POST",
+                "body": {
+                    "username": "username",
+                    "email": "user@example.com",
+                    "password": "password"
+                }
+            }
+        ],
+        "post": [
+            {
+                "url": "http://localhost:5001/post/comment/:id",
+                "method": "POST",
+                "body": {
+                    "comment": "comment"
+                }
+            },
+            {
+                "url": "http://localhost:5001/post/like/:id",
+                "method": "GET"
+            },
+            {
+                "url": "http://localhost:5001/post/:id",
+                "method": "PUT",
+                "body": {
+                    "title": "updated title",
+                    "description": "updated description"
+                }
+            },
+            {
+                "url": "http://localhost:5001/post/:id",
+                "method": "GET"
+            },
+            {
+                "url": "http://localhost:5001/post",
+                "method": "POST",
+                "body": {
+                    "title": "title",
+                    "description": "description",
+                    "subreddit_id": "id"
+                }
+            }
+        ],
+        "subreddit": {
+            "url": "http://localhost:5001/subreddit",
+            "method": "POST",
+            "body": {
+                "name": "name",
+                "description": "description"
+            }
+        }
+    }
+}

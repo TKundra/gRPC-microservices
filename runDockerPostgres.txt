@@ -1,0 +1,7 @@
+1. docker pull postgres
+2. docker run -dp 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres -v pg-vol:/var/lib/postgresql/data --name postgres postgres:15.4.1-alpine
+3. docker exec -it container_id bash
+4. after entering into container
+    a. su - postgres
+    b. psql
+    c. \conninfo - to check connectivity with postgres
